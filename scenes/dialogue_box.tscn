@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cmpo51rx8mcyo"]
+
+[ext_resource type="Script" uid="uid://bej8f7ee4lxfq" path="res://scenes/dialogue.gd" id="1_rc1id"]
+[ext_resource type="Script" uid="uid://dxiev5ptjhjek" path="res://scenes/control.gd" id="2_fu8b5"]
+
+[node name="DialogueBox" type="Node2D" unique_id=1547415653]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=26238368 groups=["dialogue_ui"]]
+script = ExtResource("1_rc1id")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=754270885]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_fu8b5")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=854359769]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 397.0
+offset_right = 1025.0
+offset_bottom = 589.0
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/Control/Panel" unique_id=451273289]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 27.0
+offset_right = 853.0
+offset_bottom = 139.0
+
+[node name="ChoicesContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel" unique_id=436939694]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 131.0
+offset_right = 849.0
+offset_bottom = 171.0
+
+[connection signal="gui_input" from="CanvasLayer/Control" to="CanvasLayer/Control" method="_on_gui_input"]
