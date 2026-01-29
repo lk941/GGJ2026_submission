@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 DialogueData="*uid://dklylre46usl4"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [global_group]
 
 dialogue_ui=""

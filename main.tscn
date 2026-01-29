@@ -59,3 +59,5 @@ offset_right = 1800.0
 offset_bottom = 540.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_h2yge")
+expand_mode = 2
+stretch_mode = 6
