@@ -1,4 +1,5 @@
 Node2D
+Node
 Control
 HBoxContainer
 RichTextLabel
@@ -11,4 +12,3 @@ TextureRect
 Camera2D
 AnimatedSprite2D
 CharacterBody2D
-Sprite2D

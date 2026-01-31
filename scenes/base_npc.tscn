@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bi6me0y271ny8"]
+[gd_scene load_steps=14 format=3 uid="uid://bi6me0y271ny8"]
 
 [ext_resource type="Texture2D" uid="uid://35xb7tepc0tr" path="res://assets/npc/snake_draft.png" id="1_sdxn2"]
 [ext_resource type="Script" uid="uid://bxdrihyfer1j6" path="res://scenes/base_npc.gd" id="1_we2a7"]
@@ -76,17 +76,17 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jc3h"]
 
-[node name="BaseNPC" type="Node2D" unique_id=1989593788]
+[node name="BaseNPC" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1751030602]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 input_pickable = true
 safe_margin = 5.0
 script = ExtResource("1_we2a7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=986323408]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_okjpt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=374560823]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 z_index = 90
 shape = SubResource("RectangleShape2D_4jc3h")
 

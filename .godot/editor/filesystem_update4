@@ -1,2 +1,4 @@
 res://main.tscn
-res://main.gd
+res://scenes/player.tscn
+res://scenes/base_npc.tscn
+res://scenes/dialogue_box.tscn

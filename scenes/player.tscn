@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bleo715rl8i04"]
+[gd_scene load_steps=13 format=3 uid="uid://bleo715rl8i04"]
 
 [ext_resource type="Texture2D" uid="uid://dtmb8brap4svx" path="res://assets/character_spritesheet_bestie1.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://hm3hk3nykp60" path="res://player.gd" id="1_onrkg"]
@@ -74,19 +74,19 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 
-[node name="Player" type="Node2D" unique_id=1323966371]
+[node name="Player" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1329791197]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_onrkg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=946158764]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_sh265")
 animation = &"right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1204267127]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_4flbx")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=600950001]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 offset = Vector2(0, -220)
 limit_left = 0
 limit_top = 0
