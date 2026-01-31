@@ -1,80 +1,9 @@
 [gd_scene format=3 uid="uid://bi6me0y271ny8"]
 
-[ext_resource type="Texture2D" uid="uid://35xb7tepc0tr" path="res://assets/npc/snake_draft.png" id="1_sdxn2"]
 [ext_resource type="Script" uid="uid://bxdrihyfer1j6" path="res://scenes/base_npc.gd" id="1_we2a7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_we2a7"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_21ban"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_okjpt"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4jc3h"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1pppp"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5fw6e"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tgbeq"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lfinn"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i5f6c"]
-atlas = ExtResource("1_sdxn2")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_okjpt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_we2a7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_21ban")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_okjpt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4jc3h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1pppp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5fw6e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tgbeq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lfinn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i5f6c")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jc3h"]
+size = Vector2(82, 146)
 
 [node name="BaseNPC" type="Node2D" unique_id=1989593788]
 
@@ -84,7 +13,6 @@ safe_margin = 5.0
 script = ExtResource("1_we2a7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=986323408]
-sprite_frames = SubResource("SpriteFrames_okjpt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=374560823]
 z_index = 90

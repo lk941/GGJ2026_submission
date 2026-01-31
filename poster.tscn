@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bise1fe3y7fmj" path="res://fonts/mago2.ttf" id="3_g538a"]
 [ext_resource type="FontFile" uid="uid://68kjdfs5ppcy" path="res://fonts/mago1.ttf" id="4_65yai"]
 [ext_resource type="Texture2D" uid="uid://vh001sujl0i3" path="res://assets/zodiac_posters/snake_logo.png" id="6_qe3sy"]
+[ext_resource type="Texture2D" uid="uid://d28p46mavbw6t" path="res://assets/npc/dragon_head.png" id="7_xexrc"]
 
 [sub_resource type="Theme" id="Theme_g538a"]
 default_font = ExtResource("2_ubgtn")
@@ -127,3 +128,10 @@ offset_top = 43.0
 offset_right = 193.0
 offset_bottom = 139.0
 texture = ExtResource("6_qe3sy")
+
+[node name="ZodiacCloseUp" type="TextureRect" parent="." unique_id=1804489122]
+offset_left = 320.0
+offset_top = 23.0
+offset_right = 620.0
+offset_bottom = 323.0
+texture = ExtResource("7_xexrc")

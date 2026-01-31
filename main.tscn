@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dj3c7s7gf4i3n" path="res://assets/background/test_bg.png" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://b3slx0uplmi2h" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bleo715rl8i04" path="res://scenes/player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bi6me0y271ny8" path="res://scenes/base_npc.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cmpo51rx8mcyo" path="res://scenes/dialogue_box.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://ccg4bebbu62gy" path="res://scenes/snake.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://276auoi71r6k" path="res://scenes/dragon.tscn" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(2735, 59)
@@ -34,14 +35,15 @@ shape = SubResource("RectangleShape2D_0xm2m")
 position = Vector2(1386.5, 794)
 shape = SubResource("RectangleShape2D_h2yge")
 
-[node name="BaseNPC" parent="Node2D" unique_id=1989593788 instance=ExtResource("3_h2yge")]
-z_index = 40
-position = Vector2(389, 543)
-scale = Vector2(4, 4)
-
 [node name="DialogueBox" parent="Node2D" unique_id=1547415653 instance=ExtResource("4_1bvp3")]
 visible = false
 z_index = 50
+
+[node name="snake" parent="Node2D" unique_id=1989593788 instance=ExtResource("4_lquwl")]
+position = Vector2(467, 518)
+
+[node name="dragon" parent="Node2D" unique_id=416250644 instance=ExtResource("6_7mycd")]
+position = Vector2(701, 524)
 
 [node name="Control" type="Control" parent="." unique_id=1884871245]
 custom_minimum_size = Vector2(960, 540)

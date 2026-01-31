@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bej8f7ee4lxfq" path="res://scenes/dialogue.gd" id="1_rc1id"]
 [ext_resource type="Script" uid="uid://dxiev5ptjhjek" path="res://scenes/control.gd" id="2_fu8b5"]
 [ext_resource type="PackedScene" uid="uid://didqxikkwsf5d" path="res://poster.tscn" id="3_tm68y"]
+[ext_resource type="Texture2D" uid="uid://dggtv48hv7564" path="res://assets/background/investigation_frame.png" id="4_hvmm2"]
 
 [node name="DialogueBox" type="Node2D" unique_id=1547415653]
 
@@ -16,9 +17,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("2_fu8b5")
 
 [node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=854359769]
+z_index = 50
 layout_mode = 0
 offset_left = 146.0
 offset_top = 397.0
@@ -40,6 +44,16 @@ offset_right = 849.0
 offset_bottom = 171.0
 
 [node name="Poster" parent="CanvasLayer/Control" unique_id=1129719193 instance=ExtResource("3_tm68y")]
+z_index = 50
 position = Vector2(150, 73)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1235356863]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+mouse_filter = 2
+texture = ExtResource("4_hvmm2")
+expand_mode = 2
+stretch_mode = 6
 
 [connection signal="gui_input" from="CanvasLayer/Control" to="CanvasLayer/Control" method="_on_gui_input"]
