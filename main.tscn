@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bi50postwreb7"]
+
+[ext_resource type="Texture2D" uid="uid://dj3c7s7gf4i3n" path="res://assets/background/test_bg.png" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://b3slx0uplmi2h" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bleo715rl8i04" path="res://scenes/player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bi6me0y271ny8" path="res://scenes/base_npc.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cmpo51rx8mcyo" path="res://scenes/dialogue_box.tscn" id="4_1bvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(2735, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(2815, 200)
+
+[node name="Main" type="Node2D" unique_id=1697137128]
+script = ExtResource("1_lquwl")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=258387328]
+z_index = 10
+
+[node name="Player" parent="Node2D" unique_id=1323966371 instance=ExtResource("2_h2yge")]
+position = Vector2(74, 677)
+scale = Vector2(1.5, 1.5)
+
+[node name="top" type="StaticBody2D" parent="Node2D" unique_id=763286813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/top" unique_id=72203756]
+position = Vector2(1357.5, 628.5)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="bottom" type="StaticBody2D" parent="Node2D" unique_id=1003302548]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/bottom" unique_id=1966732029]
+position = Vector2(1386.5, 794)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="BaseNPC" parent="Node2D" unique_id=1989593788 instance=ExtResource("3_h2yge")]
+z_index = 40
+position = Vector2(389, 543)
+scale = Vector2(4, 4)
+
+[node name="DialogueBox" parent="Node2D" unique_id=1547415653 instance=ExtResource("4_1bvp3")]
+visible = false
+z_index = 50
+
+[node name="Control" type="Control" parent="." unique_id=1884871245]
+custom_minimum_size = Vector2(960, 540)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 960.0
+offset_bottom = 540.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="Control" unique_id=989401955]
+layout_mode = 0
+offset_right = 1800.0
+offset_bottom = 540.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_h2yge")
+expand_mode = 5
+stretch_mode = 6
