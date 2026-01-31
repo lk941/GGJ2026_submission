@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var dialogue_text = $Control/Panel/DialogueText
 @onready var choices_container = $Control/Panel/ChoicesContainer
+@onready var poster = $Control/Poster
 
 var typing_speed := 0.03
 var current_dialogue := {}
@@ -17,6 +18,9 @@ func show_dialogue(dialogue):
 	$Control.show()
 
 	animate_text()
+	
+func load_poster(animal):
+	poster.show_zodiac_info(animal)
 
 
 func animate_text():
