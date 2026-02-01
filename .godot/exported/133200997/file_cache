@@ -1,7 +1,9 @@
-res://scenes/base_npc.tscn::e5d5a0f0c07d781c8ac4866adfa79775::1769878722::res://.godot/exported/133200997/export-3a027c9b37c80162b2579f7ad1c91c0c-base_npc.scn
-res://scenes/player.tscn::64031ec96e07cfdb32c08f0d9c59ca60::1769877344::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
-res://scenes/dialogue_box.tscn::cca4ba1e89f960f50f9d5b20d845de41::1769877711::res://.godot/exported/133200997/export-2caeaf45632685a283d1980091e89d3a-dialogue_box.scn
-res://main.tscn::8916c48169d7f16e3f87881fe02a9c0c::1769878783::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
-res://scenes/snake.tscn::c96e29cbc69ae4f4bae15a30afa6daf0::1769878742::res://.godot/exported/133200997/export-333bee127f5e1f55de989216bd8e1722-snake.scn
-res://poster.tscn::11017641dfa5ce24905531766ec874bc::1769878942::res://.godot/exported/133200997/export-ec3e21b6d50ccda06d7cc65e62f04cb7-poster.scn
+res://scenes/base_npc.tscn::3bc14d4d228ddc447beb002cf1640746::1769915102::res://.godot/exported/133200997/export-3a027c9b37c80162b2579f7ad1c91c0c-base_npc.scn
+res://scenes/player.tscn::bd6921203d27d06dce31edb1b11a51b5::1769940144::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/dialogue_box.tscn::97ca78ab10534e73f904d73fdf8afb43::1769939777::res://.godot/exported/133200997/export-2caeaf45632685a283d1980091e89d3a-dialogue_box.scn
+res://main.tscn::a5df60fea26892f6b3cfaf54a600524a::1769940927::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+res://scenes/snake.tscn::4f4da59589e7435415115b3dff110f4e::1769940583::res://.godot/exported/133200997/export-333bee127f5e1f55de989216bd8e1722-snake.scn
+res://poster.tscn::a4ac8e26f94694dfff413e2a67b4af81::1769940704::res://.godot/exported/133200997/export-ec3e21b6d50ccda06d7cc65e62f04cb7-poster.scn
 res://scenes/dragon.tscn::a5a0e7e697c63cbc0daf7de305b9a01c::1769878719::res://.godot/exported/133200997/export-a3608239ca84a5c7481d34892e68360d-dragon.scn
+res://fonts/header.tres::b7e90f9d5112d8bcf4d49a671798e042::1769938277::res://.godot/exported/133200997/export-8250c9b2017bdb8a3b002cbfdc82445f-header.res
+res://scenes/chop.tscn::a23d834faad3a952f1636fa1c1768596::1769915786::res://.godot/exported/133200997/export-e339bc4f04783e4a9d42e6cb979418b8-chop.scn
