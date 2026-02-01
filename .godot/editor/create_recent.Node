@@ -1,9 +1,9 @@
+TextureRect
 CanvasLayer
 ColorRect
 Control
 RichTextLabel
 TextureButton
-TextureRect
 Button
 Node2D
 Node

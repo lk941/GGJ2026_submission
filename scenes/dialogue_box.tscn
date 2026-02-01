@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://n4untc2tklqn" path="res://assets/chop_paper.png" id="6_c26ww"]
 [ext_resource type="Texture2D" uid="uid://c1po35ub6ehwl" path="res://assets/chop/chop_reject.png" id="6_pehjr"]
 [ext_resource type="Texture2D" uid="uid://bkuq2trueuud5" path="res://assets/notebook.png" id="8_yhmkw"]
+[ext_resource type="Texture2D" uid="uid://bdlh4igtqkutk" path="res://assets/chop/youdu_chop.png" id="9_rfeir"]
 
 [sub_resource type="Theme" id="Theme_c26ww"]
 
@@ -32,6 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 1
 script = ExtResource("2_fu8b5")
 
 [node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=854359769]
@@ -72,15 +74,6 @@ texture = ExtResource("4_hvmm2")
 expand_mode = 2
 stretch_mode = 6
 
-[node name="ApproveButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=2006730984]
-z_index = 99
-layout_mode = 0
-offset_left = 834.0
-offset_top = 518.0
-offset_right = 917.0
-offset_bottom = 573.0
-texture_normal = ExtResource("5_p0wdv")
-
 [node name="StampPad" type="TextureRect" parent="CanvasLayer/Control" unique_id=801691046]
 z_index = 10
 layout_mode = 0
@@ -89,15 +82,6 @@ offset_top = 407.0
 offset_right = 1012.0
 offset_bottom = 566.0
 texture = ExtResource("6_c26ww")
-
-[node name="RejectButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=297991111]
-z_index = 99
-layout_mode = 0
-offset_left = 922.0
-offset_top = 518.0
-offset_right = 1005.0
-offset_bottom = 573.0
-texture_normal = ExtResource("6_pehjr")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=2023561206]
 layout_mode = 0
@@ -114,4 +98,32 @@ offset_right = 287.0
 offset_bottom = 555.0
 texture_normal = ExtResource("8_yhmkw")
 
+[node name="Chop" type="TextureRect" parent="CanvasLayer/Control" unique_id=1590480737]
+visible = false
+z_index = 99
+layout_mode = 0
+offset_left = 885.0
+offset_top = 416.0
+offset_right = 1029.0
+offset_bottom = 560.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_rfeir")
+
+[node name="ApproveButton" type="TextureButton" parent="CanvasLayer" unique_id=2006730984]
+z_index = 99
+offset_left = 834.0
+offset_top = 518.0
+offset_right = 917.0
+offset_bottom = 573.0
+texture_normal = ExtResource("5_p0wdv")
+
+[node name="RejectButton" type="TextureButton" parent="CanvasLayer" unique_id=297991111]
+z_index = 99
+offset_left = 922.0
+offset_top = 518.0
+offset_right = 1005.0
+offset_bottom = 573.0
+texture_normal = ExtResource("6_pehjr")
+
 [connection signal="gui_input" from="CanvasLayer/Control" to="CanvasLayer/Control" method="_on_gui_input"]
+[connection signal="pressed" from="CanvasLayer/ApproveButton" to="CanvasLayer" method="_on_approve_button_pressed"]

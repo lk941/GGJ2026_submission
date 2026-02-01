@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var dialogue_text = $Control/Panel/DialogueText
 @onready var choices_container = $Control/Panel/ChoicesContainer
 @onready var poster = $Control/Poster
+@onready var stamp = $Control/Chop
 
 var typing_speed := 0.03
 var current_dialogue := {}
@@ -55,3 +56,12 @@ func _on_choice_selected(choice):
 	else:
 		var next_dialogue = DialogueData.dialogues[choice["next"]]
 		show_dialogue(next_dialogue)
+
+
+func _on_approve_button_pressed():
+	stamp.visible = true
+	await get_tree().create_timer(1.0).timeout
+	var ui = get_tree().get_first_node_in_group("dialogue_ui")
+	ui.hide()
+	
+	
