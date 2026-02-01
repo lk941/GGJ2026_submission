@@ -53,12 +53,12 @@ offset_top = 27.0
 offset_right = 488.0
 offset_bottom = 139.0
 
-[node name="ChoicesContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel" unique_id=627291494]
+[node name="ChoicesContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel" unique_id=906084045]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 114.0
+offset_top = 88.0
 offset_right = 484.0
-offset_bottom = 154.0
+offset_bottom = 147.0
 
 [node name="Poster" parent="CanvasLayer/Control" unique_id=1129719193 instance=ExtResource("3_tm68y")]
 z_index = 50
@@ -127,3 +127,4 @@ texture_normal = ExtResource("6_pehjr")
 
 [connection signal="gui_input" from="CanvasLayer/Control" to="CanvasLayer/Control" method="_on_gui_input"]
 [connection signal="pressed" from="CanvasLayer/ApproveButton" to="CanvasLayer" method="_on_approve_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RejectButton" to="CanvasLayer" method="_on_reject_button_pressed"]

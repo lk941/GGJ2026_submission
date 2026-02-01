@@ -3,10 +3,10 @@ extends Node
 
 var dialogues = {
 	"dragon": {
-		"text": "Hello... jade pendants for sale...",
+		"text": "Hello... can I help you?",
 		"choices": [
-			{ "text": "No thanks!", "next": null },
-			{ "text": "I'm lost", "next": "dragon_help" }
+			{ "text": "[Question] What year were you born in?", "next": "dragon_year" },
+			{ "text": "[Question] Who's your bestie?", "next": "dragon_friend" }
 		]
 	},
 	"snake": {
@@ -28,8 +28,12 @@ var dialogues = {
 	"text": "Yeah... snake and dragon are my friends, but they seem to have issues right now.",
 	"choices": []
 	},
-	"dragon_help": {
-	"text": "I can help you.",
+	"dragon_friend": {
+	"text": "I'm friends with everyone! Though Rooster gets me a lil more",
+	"choices": []
+	},
+	"dragon_year": {
+	"text": "1988. As good as it gets.",
 	"choices": []
 	}
 }

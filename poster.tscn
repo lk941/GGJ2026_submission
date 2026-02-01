@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://68kjdfs5ppcy" path="res://fonts/mago1.ttf" id="4_65yai"]
 [ext_resource type="Texture2D" uid="uid://vh001sujl0i3" path="res://assets/zodiac_posters/snake_logo.png" id="6_qe3sy"]
 [ext_resource type="Texture2D" uid="uid://d28p46mavbw6t" path="res://assets/npc/dragon_head.png" id="7_xexrc"]
+[ext_resource type="Script" uid="uid://c4ufri704fvxe" path="res://zoomed_poster.gd" id="8_hjbd7"]
 
 [sub_resource type="Theme" id="Theme_65yai"]
 default_font = ExtResource("3_g538a")
@@ -139,6 +140,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("8_hjbd7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1620693243]
 visible = false
@@ -264,4 +266,5 @@ offset_bottom = 163.44444
 texture = ExtResource("6_qe3sy")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="gui_input" from="Control" to="Control" method="_on_gui_input"]
 [connection signal="pressed" from="Control/CanvasLayer/TextureButton" to="." method="_on_zoom_poster_button_pressed"]

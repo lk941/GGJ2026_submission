@@ -2,8 +2,10 @@ extends CanvasLayer
 
 @onready var dialogue_text = $Control/Panel/DialogueText
 @onready var choices_container = $Control/Panel/ChoicesContainer
+@onready var animal_str: String = ""
 @onready var poster = $Control/Poster
 @onready var stamp = $Control/Chop
+@onready var stamp_img: Texture2D
 
 var typing_speed := 0.03
 var current_dialogue := {}
@@ -21,6 +23,7 @@ func show_dialogue(dialogue):
 	animate_text()
 	
 func load_poster(animal):
+	animal_str = animal
 	poster.show_zodiac_info(animal)
 
 
@@ -59,9 +62,20 @@ func _on_choice_selected(choice):
 
 
 func _on_approve_button_pressed():
+	stamp_img = load("res://assets/chop/youdu_chop.png")
+	stamp.texture = stamp_img
 	stamp.visible = true
 	await get_tree().create_timer(1.0).timeout
 	var ui = get_tree().get_first_node_in_group("dialogue_ui")
 	ui.hide()
-	
-	
+	stamp.visible = false
+
+
+func _on_reject_button_pressed():
+	stamp_img = load("res://assets/chop/reject_chop.png")
+	stamp.texture = stamp_img
+	stamp.visible = true
+	await get_tree().create_timer(1.0).timeout
+	var ui = get_tree().get_first_node_in_group("dialogue_ui")
+	ui.hide()
+	stamp.visible = false

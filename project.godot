@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 DialogueData="*uid://dklylre46usl4"
 ZodiacInfo="*uid://dota1k6nnq4s"
+Global="*uid://c8xnt7ehob533"
 
 [display]
 
