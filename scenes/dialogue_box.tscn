@@ -1,16 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmpo51rx8mcyo"]
+[gd_scene format=3 uid="uid://cmpo51rx8mcyo"]
 
 [ext_resource type="Script" uid="uid://bej8f7ee4lxfq" path="res://scenes/dialogue.gd" id="1_rc1id"]
 [ext_resource type="Script" uid="uid://dxiev5ptjhjek" path="res://scenes/control.gd" id="2_fu8b5"]
 [ext_resource type="PackedScene" uid="uid://didqxikkwsf5d" path="res://poster.tscn" id="3_tm68y"]
 [ext_resource type="Texture2D" uid="uid://dggtv48hv7564" path="res://assets/background/investigation_frame.png" id="4_hvmm2"]
+[ext_resource type="Texture2D" uid="uid://1gp1c8osr65r" path="res://assets/chop/chop_approve.png" id="5_p0wdv"]
+[ext_resource type="Texture2D" uid="uid://n4untc2tklqn" path="res://assets/chop_paper.png" id="6_c26ww"]
+[ext_resource type="Texture2D" uid="uid://c1po35ub6ehwl" path="res://assets/chop/chop_reject.png" id="6_pehjr"]
+[ext_resource type="Texture2D" uid="uid://bkuq2trueuud5" path="res://assets/notebook.png" id="8_yhmkw"]
 
-[node name="DialogueBox" type="Node2D"]
+[sub_resource type="Theme" id="Theme_c26ww"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." groups=["dialogue_ui"]]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhmkw"]
+bg_color = Color(0.15, 0.15, 0.15, 0.8627451)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="DialogueBox" type="Node2D" unique_id=1340726901]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1598759625 groups=["dialogue_ui"]]
 script = ExtResource("1_rc1id")
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1121574135]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,30 +37,33 @@ script = ExtResource("2_fu8b5")
 [node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=854359769]
 z_index = 50
 layout_mode = 0
-offset_left = 146.0
+offset_left = 304.0
 offset_top = 397.0
-offset_right = 1025.0
-offset_bottom = 589.0
+offset_right = 820.0
+offset_bottom = 568.0
+theme = SubResource("Theme_c26ww")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yhmkw")
 
-[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/Control/Panel"]
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/Control/Panel" unique_id=205004614]
 layout_mode = 0
 offset_left = 27.0
 offset_top = 27.0
-offset_right = 853.0
+offset_right = 488.0
 offset_bottom = 139.0
 
-[node name="ChoicesContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel"]
+[node name="ChoicesContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel" unique_id=627291494]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 131.0
-offset_right = 849.0
+offset_right = 484.0
 offset_bottom = 171.0
 
 [node name="Poster" parent="CanvasLayer/Control" unique_id=1129719193 instance=ExtResource("3_tm68y")]
 z_index = 50
 position = Vector2(150, 73)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1235356863]
+[node name="Frame" type="TextureRect" parent="CanvasLayer/Control" unique_id=1235356863]
+z_index = 5
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 651.0
@@ -55,5 +71,47 @@ mouse_filter = 2
 texture = ExtResource("4_hvmm2")
 expand_mode = 2
 stretch_mode = 6
+
+[node name="ApproveButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=2006730984]
+z_index = 99
+layout_mode = 0
+offset_left = 834.0
+offset_top = 518.0
+offset_right = 917.0
+offset_bottom = 573.0
+texture_normal = ExtResource("5_p0wdv")
+
+[node name="StampPad" type="TextureRect" parent="CanvasLayer/Control" unique_id=801691046]
+z_index = 10
+layout_mode = 0
+offset_left = 830.0
+offset_top = 407.0
+offset_right = 1012.0
+offset_bottom = 566.0
+texture = ExtResource("6_c26ww")
+
+[node name="RejectButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=297991111]
+z_index = 99
+layout_mode = 0
+offset_left = 922.0
+offset_top = 518.0
+offset_right = 1005.0
+offset_bottom = 573.0
+texture_normal = ExtResource("6_pehjr")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=2023561206]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0.26839805, 0.26839802, 0.26839802, 0.69803923)
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=958355681]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 407.0
+offset_right = 287.0
+offset_bottom = 555.0
+texture_normal = ExtResource("8_yhmkw")
 
 [connection signal="gui_input" from="CanvasLayer/Control" to="CanvasLayer/Control" method="_on_gui_input"]

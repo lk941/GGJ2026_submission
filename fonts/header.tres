@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://chft3an1qqhi5"]
+
+[ext_resource type="FontFile" uid="uid://bbri3yrdroqxi" path="res://fonts/mago3.ttf" id="1_1cyhc"]
+
+[resource]
+default_font = ExtResource("1_1cyhc")
+default_font_size = 20

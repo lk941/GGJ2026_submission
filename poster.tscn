@@ -2,15 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dfrjyxe4aaxjj" path="res://assets/zodiac_posters/poster_template.png" id="1_imi1m"]
 [ext_resource type="Script" uid="uid://ckb584ue7ql5k" path="res://poster.gd" id="1_mp3sy"]
-[ext_resource type="FontFile" uid="uid://bbri3yrdroqxi" path="res://fonts/mago3.ttf" id="2_ubgtn"]
 [ext_resource type="FontFile" uid="uid://bise1fe3y7fmj" path="res://fonts/mago2.ttf" id="3_g538a"]
+[ext_resource type="Theme" uid="uid://chft3an1qqhi5" path="res://fonts/header.tres" id="3_xexrc"]
 [ext_resource type="FontFile" uid="uid://68kjdfs5ppcy" path="res://fonts/mago1.ttf" id="4_65yai"]
 [ext_resource type="Texture2D" uid="uid://vh001sujl0i3" path="res://assets/zodiac_posters/snake_logo.png" id="6_qe3sy"]
 [ext_resource type="Texture2D" uid="uid://d28p46mavbw6t" path="res://assets/npc/dragon_head.png" id="7_xexrc"]
-
-[sub_resource type="Theme" id="Theme_g538a"]
-default_font = ExtResource("2_ubgtn")
-default_font_size = 20
 
 [sub_resource type="Theme" id="Theme_65yai"]
 default_font = ExtResource("3_g538a")
@@ -32,7 +28,7 @@ offset_left = 80.0
 offset_top = 132.0
 offset_right = 156.0
 offset_bottom = 149.0
-theme = SubResource("Theme_g538a")
+theme = ExtResource("3_xexrc")
 theme_override_colors/default_color = Color(0.72335637, 0.20444179, 0.045550704, 1)
 text = "Animal"
 fit_content = true

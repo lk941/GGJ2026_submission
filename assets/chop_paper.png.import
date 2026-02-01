@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdlh4igtqkutk"
-path="res://.godot/imported/youdu_chop.png-f9c99f513bae837d1131f50912ecf6eb.ctex"
+uid="uid://n4untc2tklqn"
+path="res://.godot/imported/chop_paper.png-a7e0447ccd0b189b228f1c8617c624c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chop/youdu_chop.png"
-dest_files=["res://.godot/imported/youdu_chop.png-f9c99f513bae837d1131f50912ecf6eb.ctex"]
+source_file="res://assets/chop_paper.png"
+dest_files=["res://.godot/imported/chop_paper.png-a7e0447ccd0b189b228f1c8617c624c3.ctex"]
 
 [params]
 

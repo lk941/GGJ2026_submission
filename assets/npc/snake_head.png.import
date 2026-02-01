@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdlh4igtqkutk"
-path="res://.godot/imported/youdu_chop.png-f9c99f513bae837d1131f50912ecf6eb.ctex"
+uid="uid://c4w3tjwghyhc0"
+path="res://.godot/imported/snake_head.png-0444eadff3437e7b773cbb75991420c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chop/youdu_chop.png"
-dest_files=["res://.godot/imported/youdu_chop.png-f9c99f513bae837d1131f50912ecf6eb.ctex"]
+source_file="res://assets/npc/snake_head.png"
+dest_files=["res://.godot/imported/snake_head.png-0444eadff3437e7b773cbb75991420c4.ctex"]
 
 [params]
 

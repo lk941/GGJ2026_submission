@@ -39,8 +39,8 @@ func _physics_process(delta):
 		
 		move_and_slide()
 	
-	else:
-		_animated_sprite.stop()
+	#else:
+		#_animated_sprite.stop()
 		
 		
 		
