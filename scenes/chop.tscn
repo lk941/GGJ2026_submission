@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvet3whd3bpq"]
+
+[ext_resource type="Texture2D" uid="uid://dtnx6vh17rmjn" path="res://assets/chop/reject_chop.png" id="1_igyx6"]
+[ext_resource type="Texture2D" uid="uid://bdlh4igtqkutk" path="res://assets/chop/youdu_chop.png" id="2_oklaa"]
+
+[node name="Chop Scene" type="Node2D"]
+
+[node name="RejectChop" type="Sprite2D" parent="."]
+position = Vector2(817, 532)
+texture = ExtResource("1_igyx6")
+
+[node name="YouduChop" type="Sprite2D" parent="."]
+position = Vector2(1014, 538)
+texture = ExtResource("2_oklaa")

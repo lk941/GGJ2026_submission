@@ -2,6 +2,7 @@ TextureRect
 RichTextLabel
 TextureButton
 Node2D
+Node
 Control
 HBoxContainer
 Panel
