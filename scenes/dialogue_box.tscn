@@ -54,9 +54,9 @@ offset_bottom = 139.0
 [node name="ChoicesContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel" unique_id=627291494]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 131.0
+offset_top = 114.0
 offset_right = 484.0
-offset_bottom = 171.0
+offset_bottom = 154.0
 
 [node name="Poster" parent="CanvasLayer/Control" unique_id=1129719193 instance=ExtResource("3_tm68y")]
 z_index = 50

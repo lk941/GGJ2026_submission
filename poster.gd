@@ -9,6 +9,8 @@ extends Node2D
 @onready var friends_text = $Friends
 @onready var enemies_text = $Enemies
 
+@onready var zoom_poster = $Control/CanvasLayer
+
 
 func show_zodiac_info(animal):
 	var animal_logo = load(ZodiacInfo.zodiac_info[animal]["logo"])
@@ -21,3 +23,11 @@ func show_zodiac_info(animal):
 	personality_text.text = ZodiacInfo.zodiac_info[animal]["personality"]
 	friends_text.text = ZodiacInfo.zodiac_info[animal]["friends"]
 	enemies_text.text = ZodiacInfo.zodiac_info[animal]["enemies"]
+
+
+func _on_texture_button_pressed():
+	zoom_poster.visible = true
+
+
+func _on_zoom_poster_button_pressed():
+	zoom_poster.visible = false

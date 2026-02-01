@@ -131,3 +131,137 @@ offset_top = 23.0
 offset_right = 620.0
 offset_bottom = 323.0
 texture = ExtResource("7_xexrc")
+
+[node name="Control" type="Control" parent="." unique_id=693842760]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1620693243]
+visible = false
+scale = Vector2(1.8, 1.8)
+transform = Transform2D(1.8, 0, 0, 1.8, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="Control/CanvasLayer" unique_id=698022995]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08662925, 0.08662925, 0.08662925, 0.6392157)
+
+[node name="TextureButton" type="TextureButton" parent="Control/CanvasLayer" unique_id=1109470128]
+offset_left = 206.11111
+offset_top = 24.444447
+offset_right = 446.1111
+offset_bottom = 324.44446
+texture_normal = ExtResource("1_imi1m")
+
+[node name="ZodiacName" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=693799235]
+offset_left = 286.1111
+offset_top = 156.44444
+offset_right = 362.1111
+offset_bottom = 173.44444
+theme = ExtResource("3_xexrc")
+theme_override_colors/default_color = Color(0.72335637, 0.20444179, 0.045550704, 1)
+text = "Animal"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PersonalityLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1374189141]
+offset_left = 299.1111
+offset_top = 203.44444
+offset_right = 350.1111
+offset_bottom = 221.44444
+theme = SubResource("Theme_65yai")
+theme_override_colors/default_color = Color(0.86, 0.29870665, 0.094600014, 1)
+text = "Personality"
+fit_content = true
+
+[node name="YearsLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1757195038]
+offset_left = 298.1111
+offset_top = 176.44444
+offset_right = 349.1111
+offset_bottom = 194.44444
+theme = SubResource("Theme_65yai")
+theme_override_colors/default_color = Color(0.86, 0.29870665, 0.094600014, 1)
+text = "Years"
+horizontal_alignment = 1
+
+[node name="FriendsLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1841678190]
+offset_left = 252.11111
+offset_top = 241.44444
+offset_right = 283.1111
+offset_bottom = 259.44446
+theme = SubResource("Theme_65yai")
+theme_override_colors/default_color = Color(0.86, 0.29870665, 0.094600014, 1)
+text = "friends"
+fit_content = true
+
+[node name="EnemiesLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=2005418069]
+offset_left = 366.1111
+offset_top = 241.44444
+offset_right = 397.1111
+offset_bottom = 259.44446
+theme = SubResource("Theme_65yai")
+theme_override_colors/default_color = Color(0.86, 0.29870665, 0.094600014, 1)
+text = "enemies"
+fit_content = true
+
+[node name="Years" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1862038196]
+offset_left = 272.1111
+offset_top = 190.44444
+offset_right = 380.1111
+offset_bottom = 203.44444
+theme = SubResource("Theme_mp3sy")
+theme_override_colors/default_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+text = "2006, 2010, 2014, 2018, 2022, 2026"
+autowrap_trim_flags = 0
+
+[node name="Personality" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1396713649]
+offset_left = 239.11111
+offset_top = 216.44444
+offset_right = 412.1111
+offset_bottom = 236.44444
+theme = SubResource("Theme_mp3sy")
+theme_override_colors/default_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+text = "Snakes are calm, wise, observant, mysterious, and think deeply"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Friends" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=768559631]
+offset_left = 230.11111
+offset_top = 254.44444
+offset_right = 306.1111
+offset_bottom = 290.44446
+theme = SubResource("Theme_mp3sy")
+theme_override_colors/default_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+text = "Dragon, Rooster"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Enemies" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1247337518]
+offset_left = 344.1111
+offset_top = 254.44444
+offset_right = 421.1111
+offset_bottom = 290.44446
+theme = SubResource("Theme_mp3sy")
+theme_override_colors/default_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+text = "Rat, Tiger, Goat"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="ZodiacLogo" type="TextureRect" parent="Control/CanvasLayer" unique_id=401801700]
+offset_left = 255.11111
+offset_top = 67.44444
+offset_right = 399.1111
+offset_bottom = 163.44444
+texture = ExtResource("6_qe3sy")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/TextureButton" to="." method="_on_zoom_poster_button_pressed"]

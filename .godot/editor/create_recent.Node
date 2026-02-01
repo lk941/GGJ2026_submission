@@ -1,12 +1,12 @@
 CanvasLayer
+ColorRect
+Control
 RichTextLabel
 TextureButton
-ColorRect
 TextureRect
 Button
 Node2D
 Node
-Control
 HBoxContainer
 Panel
 Area2D
